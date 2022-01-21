@@ -32,10 +32,28 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 <h2> LUNGHEZZA PARAGRAFO: <?php echo $paragraph_length; ?> </h2>
 
+<!-- CREO VARIABILE DA PASSARE CON GET -->
+
+<?php 
+    $not_censored = $_GET['word'];
+?>
+
+<!-- passo la la variablie nel paragrafo -->
+
+<?php 
+    $paragraph = 'Lo spreco della vita si trova nell\'amore che non si è saputo dare, nel potere che non si è saputo utilizzare, nell\'egoistica prudenza che ci ha impedito di rischiare e che, evitandoci un dispiacere, ci ha fatto mancare la'. '  '. $not_censored;
+?>
+
+<h2> <?php echo $paragraph; ?> </h2>
+
+<?php
+    $paragraph_length = strlen($paragraph);
+    // var_dump($paragraph_length);
+?>
+
+<h2>LUNGHEZZA PARAGRAFO: <?php echo $paragraph_length; ?></h2>
 
 
-
-    
 
 </body>
 </html>
